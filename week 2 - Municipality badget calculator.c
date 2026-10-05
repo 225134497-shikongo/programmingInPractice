@@ -1,36 +1,30 @@
 #include <stdio.h>
 int main() {
 
- double revenue;
- double expenses;
- double balance;
+float basic_salary, housing_allowance, transport_allowance, tax;
+float gross_salary, net_salary;
 
- printf("%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n");
-printf("MUNICIPAL BUDGET CALCULATOR\n");
- printf("%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n");
+printf("Enter Basic salary: ");
+scanf("%f", &basic_salary);
 
- printf("Enter total revenue: ");
- scanf("%lf", &revenue);
+printf("Enter Housing Allowance: ");
+scanf("%f", &housing_allowance);
 
- printf("Enter total expenses: ");
-scanf("%lf", &expenses);
+printf("Enter Transport_allowance: ");
+scanf("%f", &transport_allowance);
 
- balance = revenue - expenses;
+printf("Enter Tax amount: ");
+scanf("%f", &tax);
 
-printf("******************************\n"); 
-printf("\nRevenue: %.2f\n", revenue);
- printf("Expenses: %.2f\n", expenses);
+gross_salary = basic_salary + housing_allowance + transport_allowance;
+net_salary = gross_salary - tax;
 
- if (balance > 0) {
- printf("Surplus: %.2f\n", balance);
- }
- else if (balance < 0) {
- printf("Deficit: %.2f\n", -balance);
- }
- else {
- printf("The budget is balanced.\n");
-}
-printf("******************************\n"); 
+printf("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
+printf("\n        SALARY DETAILS            \n");
+printf("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
+
+printf("Gross salary: %2f\n", gross_salary);
+printf("Net salary: %2f\n", net_salary);
  
- return 0;
-}
+return 0;
+  }
